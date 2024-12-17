@@ -2,6 +2,9 @@ import express from 'express'
 const app = express()
 app.use(express.json())
 
+import cors from 'cors'
+app.use(cors())
+
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
